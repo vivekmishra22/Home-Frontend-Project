@@ -9,13 +9,13 @@ const Register = () => {
           <Col md={8} className='mx-auto my-4'>
             <div className="border-top border-5 border-primary"></div>
             <Form className='form-control'>
-              <h2 className='text-center'>Registration Form</h2>
+              <h2 className='text-center'>REGISTRATION FORM</h2>
               <p>Please enter your details to join us!</p>
               <Row>
                 <Col md={4}>
                   <Form.Group className="mb-3" controlId="formBasicEmail">
                     <Form.Label>Name</Form.Label>
-                    <Form.Control type="email" placeholder="Enter Name" />
+                    <Form.Control type="text" placeholder="Enter Name" />
                   </Form.Group>
                 </Col>
                 <Col md={4}>
