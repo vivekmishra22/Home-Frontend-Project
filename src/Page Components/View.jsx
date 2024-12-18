@@ -12,9 +12,9 @@ const View = () => {
     }, [])
 
     const showUsers = () => {
-        axios.get('http://localhost:8000/findall')
+        axios.get('http://localhost:8000/getuser')
             .then(res => {
-                setUserData(res.data.userData)
+                setUserData(res.data.data)
             }).catch(err => {
                 console.log(err);
             })
@@ -41,23 +41,17 @@ const View = () => {
                                 </tr>
                             </thead>
                             <tbody>
-                                {userData.map((a, id) => {
+                                {userData.map((Register, id) => {
                                     return (
-                                        <tr>
+                                        <tr key={id}>
                                             <td>{id + 1}</td>
-                                            <td>{a.name}</td>
-                                            <td>{a.email}</td>
+                                            <td>{Register.fname}</td>
+                                            <td>{Register.email}</td>
+                                            <td>{Register.mobile}</td>
+                                            <td>{Register.address}</td>
                                         </tr>
                                     )
                                 })}
-
-                                    {/* // <td>@mdo</td>
-                                    // <td>1</td>
-                                    // <td>Mark</td>
-                                    // <td>Otto</td>
-                                    // <td>@mdo</td>
-                                    // <td>Otto</td>
-                                    // <td>@mdo</td> */}
 
                             </tbody>
                         </Table>
