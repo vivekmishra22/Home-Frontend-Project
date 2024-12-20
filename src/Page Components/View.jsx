@@ -31,6 +31,7 @@ const View = () => {
                                     <th>Sr. No</th>
                                     <th>Name</th>
                                     <th>Email</th>
+                                    <th>Password</th>
                                     <th>Mobile</th>
                                     <th>Address</th>
                                     <th>City</th>
@@ -46,6 +47,7 @@ const View = () => {
                                         <tr key={id}>
                                             <td>{id + 1}</td>
                                             <td>{Register.fname}</td>
+                                            <td>{Register.password}</td>
                                             <td>{Register.email}</td>
                                             <td>{Register.mobile}</td>
                                             <td>{Register.address}</td>
