@@ -1,23 +1,40 @@
 // import React from 'react';
-import { Col, Container, Row, Table } from 'react-bootstrap';
+import { Col, Container, Row, Table, Button } from 'react-bootstrap';
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { BiPencil } from "react-icons/bi";
 
 const View = () => {
 
     const [userData, setUserData] = useState([])
+
+    const navigate = useNavigate()
 
     useEffect(() => {
         showUsers()
     }, [])
 
     const showUsers = () => {
-        axios.get('http://localhost:8000/getuser')
+        axios.get(`http://localhost:8000/getuser`)
             .then(res => {
                 setUserData(res.data.data)
             }).catch(err => {
                 console.log(err);
             })
+    }
+
+    const deletedata = (id) => {
+        axios.delete(`http://localhost:8000/deleteuser/${id}`)
+        .then(
+            res => {
+                console.log('User Deleted : ', res.data);
+                alert('User Delete');
+                showUsers()
+            }
+        ).catch(error => {
+            console.error('Error Deleting User : ', error);
+        });
     }
 
     return (
@@ -51,6 +68,20 @@ const View = () => {
                                             <td>{Register.email}</td>
                                             <td>{Register.mobile}</td>
                                             <td>{Register.address}</td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td>
+                                            <Button
+                                                    onClick={ () => {
+                                                        // navigate(/updateuser/${Register._id})
+                                                    }}
+                                                >Edit</Button>
+                                                <Button
+                                                    onClick={ () => deletedata(Register._id)}
+                                                >delete</Button>
+                                            </td>
                                         </tr>
                                     )
                                 })}

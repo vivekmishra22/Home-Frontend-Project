@@ -1,6 +1,6 @@
-import axios from 'axios';
 import React, { useState } from 'react';
 import { Container, Row, Col, Form, Button } from 'react-bootstrap';
+import axios from 'axios';
 
 const Register = () => {
 
@@ -28,7 +28,7 @@ const Register = () => {
       address
     }
 
-    axios.post('http://localhost:8000/register', userData).then(res => {
+    axios.post('http://localhost:8000/adduser', userData).then(res => {
       console.log("hi", res.data);
       alert('Data Added Successfully!!');
       setFname("");
