@@ -2,14 +2,14 @@
 import { Col, Container, Row, Table, Button } from 'react-bootstrap';
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import { BiPencil } from "react-icons/bi";
+// import { useNavigate } from 'react-router-dom';
+// import { BiPencil } from "react-icons/bi";
 
 const View = () => {
 
     const [userData, setUserData] = useState([])
 
-    const navigate = useNavigate()
+    // const navigate = useNavigate()
 
     useEffect(() => {
         showUsers()
@@ -68,12 +68,12 @@ const View = () => {
                                             <td>{Register.email}</td>
                                             <td>{Register.mobile}</td>
                                             <td>{Register.address}</td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
+                                            <td>{Register.city}</td>
+                                            <td>{Register.gender}</td>
+                                            <td>{Register.subject}</td>
                                             <td></td>
                                             <td>
-                                            <Button
+                                            <Button className='me-2'
                                                     onClick={ () => {
                                                         // navigate(/updateuser/${Register._id})
                                                     }}
