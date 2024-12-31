@@ -2,6 +2,14 @@
 import { Col, Container, Row, Table, Button } from 'react-bootstrap';
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
+<<<<<<< HEAD
+=======
+import { FiEdit } from "react-icons/fi";
+// import { MdDelete } from "react-icons/md";
+// import { AiTwotoneDelete } from "react-icons/ai";
+import { AiOutlineDelete } from "react-icons/ai";
+import { RiDeleteBin7Line } from "react-icons/ri";
+>>>>>>> 268c5aa29692419f36d9b3c24a44da97995244a8
 // import { useNavigate } from 'react-router-dom';
 // import { BiPencil } from "react-icons/bi";
 
@@ -26,15 +34,15 @@ const View = () => {
 
     const deletedata = (id) => {
         axios.delete(`http://localhost:8000/deleteuser/${id}`)
-        .then(
-            res => {
-                console.log('User Deleted : ', res.data);
-                alert('User Delete');
-                showUsers()
-            }
-        ).catch(error => {
-            console.error('Error Deleting User : ', error);
-        });
+            .then(
+                res => {
+                    console.log('User Deleted : ', res.data);
+                    alert('User Delete');
+                    showUsers()
+                }
+            ).catch(error => {
+                console.error('Error Deleting User : ', error);
+            });
     }
 
     return (
@@ -72,6 +80,7 @@ const View = () => {
                                             <td>{Register.gender}</td>
                                             <td>{Register.subject}</td>
                                             <td></td>
+<<<<<<< HEAD
                                             <td>
                                             <Button className='me-2'
                                                     onClick={ () => {
@@ -81,6 +90,25 @@ const View = () => {
                                                 <Button
                                                     onClick={ () => deletedata(Register._id)}
                                                 >delete</Button>
+=======
+                                            <td className='px-2 d-flex justify-content-center align-items-center'>
+                                                <Button className='me-1 bg-transparent border-0'>
+                                                    {/* d-flex align-items-center */}
+                                                    {/* onClick={ () => {
+                                                        navigate(/updateuser/${Register._id})
+                                                    }} */}
+                                                    <FiEdit className='fs-5 text-primary' />
+                                                    {/* Edit */}
+                                                </Button>
+                                                <Button className='bg-transparent border-0' onClick={() => deletedata(Register._id)}>
+                                                    {/* <MdDeleteOutline /> */}
+                                                    {/* <AiTwotoneDelete /> */}
+                                                    {/* <AiOutlineDelete className='fs-5 text-primary' /> */}
+                                                    <RiDeleteBin7Line className='fs-5 text-danger' />
+                                                    {/* <MdDelete className='bg-primary' /> */}
+                                                    {/* Delete */}
+                                                </Button>
+>>>>>>> 268c5aa29692419f36d9b3c24a44da97995244a8
                                             </td>
                                         </tr>
                                     )
