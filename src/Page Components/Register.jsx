@@ -139,7 +139,7 @@ const Register = () => {
                       name="gender"
                       id="gender-male"
                       value="Male"
-                      checked={gender === "male"}
+                      checked={gender === "Male"}
                       onChange={(e) => setGender(e.target.value)}
                     />
                     <Form.Check
@@ -148,7 +148,7 @@ const Register = () => {
                       name="gender"
                       id="gender-female"
                       value="Female"
-                      checked={gender === "female"}
+                      checked={gender === "Female"}
                       onChange={(e) => setGender(e.target.value)}
                     />
                   </Form.Group>

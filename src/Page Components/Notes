@@ -1,0 +1,58 @@
+Q. Arrow Function :
+-> Arrow functions, introduced in ES6 (ECMAScript 2015).
+-  Arrow functions allows a short syntax for writing function expressions.
+    Arrow functions make JavaScript code more concise and readable. 
+- Arrow functions provide a concise and clean syntax for writing functions in JavaScript
+- useful for short, single-expression functions.
+
+Q. Postman :
+-> Postman is a popular API testing tool that allows developers to send HTTP requests, inspect responses, automate tests, and document APIs.
+- It simplifies API development by providing a user-friendly interface for interacting with REST, SOAP, and GraphQL APIs.
+    - Postman is a collaboration platform for API development. It allows developers to:
+    - Send HTTP requests (GET, POST, PUT, DELETE, etc.).
+    - Test APIs and validate responses.
+    - Automate API testing with collections and scripts.
+    - Document APIs.
+    - Mock APIs for testing without a backend.
+    - Monitor APIs for performance and uptime.
+    - Collaborate with teams by sharing collections and environments.
+
+Q. useState :
+-> useState is one of the most fundamental and widely-used hooks in React.
+-  It allows functional components to manage state, enabling them to store and update data dynamically.
+- useState is a React Hook that allows you to add state to functional components.
+- The useState hook is one of the most commonly used hooks in React.
+- It allows functional components to manage state without needing a class component.
+- With useState, functional components can now manage state without converting to class components.
+
+    * const [state, setState] = useState(initialValue);
+    - state – The current state value.
+    - setState – A function to update the state.
+    - initialValue – The default value of the state.
+
+    import React, { useState } from 'react';
+
+    function Counter() {
+    const [count, setCount] = useState(0);
+
+    return (
+        <div>
+        <p>You clicked {count} times</p>
+        <button onClick={() => setCount(count + 1)}>
+            Click me
+        </button>
+        </div>
+    );
+    }
+
+    - When you call useState, it returns an array with two elements:
+    - The current state value.
+    - A function to update the state.
+    - React re-renders the component whenever the state is updated using the setState function.
+
+    Explanation:
+    - count is the state variable initialized to 0.
+    - setCount is the function to update count.
+    - Clicking the button increments the count and triggers a re-render.
+
+
