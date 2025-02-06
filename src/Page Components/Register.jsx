@@ -1,9 +1,13 @@
+// This imports the useState hook from React, which allows us to manage state inside a functional component
 import React, { useState } from 'react';
 import { Container, Row, Col, Form, Button } from 'react-bootstrap';
 import axios from 'axios';
 
 const Register = () => {
 
+  // Each useState creates a state variable and a setter function to update that variable
+  // useState: A React Hook that allows functional components to manage state.
+  
   const [fname, setFname] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -44,6 +48,7 @@ const Register = () => {
       subject
     }
 
+    // Axios is an HTTP client used to send requests to a backend server.
     axios.post('http://localhost:8000/adduser', userData).then(res => {
       console.log("hi", res.data);
       alert('Data Added Successfully!!');
