@@ -30,6 +30,12 @@ Q. useState :
     - setState – A function to update the state.
     - initialValue – The default value of the state.
 
+
+    - When you call useState, it returns an array with two elements:
+    - The current state value.
+    - A function to update the state.
+    - React re-renders the component whenever the state is updated using the setState function.
+
     import React, { useState } from 'react';
 
     function Counter() {
@@ -44,11 +50,6 @@ Q. useState :
         </div>
     );
     }
-
-    - When you call useState, it returns an array with two elements:
-    - The current state value.
-    - A function to update the state.
-    - React re-renders the component whenever the state is updated using the setState function.
 
     Explanation:
     - count is the state variable initialized to 0.

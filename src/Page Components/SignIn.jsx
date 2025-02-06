@@ -1,5 +1,5 @@
-import React from 'react'
-import { Col, Container, Row, Form, Button } from 'react-bootstrap'
+import React from 'react';
+import { Col, Container, Row, Form, Button } from 'react-bootstrap';
 
 const SignIn = () => {
     return (
@@ -34,4 +34,4 @@ const SignIn = () => {
     )
 }
 
-export default SignIn
+export default SignIn;
