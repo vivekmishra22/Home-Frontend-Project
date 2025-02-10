@@ -42,7 +42,7 @@ Q. useState :
     ✅ When you call useState, it returns an array with two elements:
     ✅ The current state value.
     ✅ A function to update the state.
-    ✅ React re✅renders the component whenever the state is updated using the setState function.
+    ✅ React rerenders the component whenever the state is updated using the setState function.
 
     import React, { useState } from 'react';
 

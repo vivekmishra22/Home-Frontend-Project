@@ -1,0 +1,59 @@
+1. Function Signature
+
+    function handleSubmit(e) {
+
+- The function takes an event object (e) as its parameter. 
+- This event object is automatically passed by the browser when the form is submitted.
+
+
+2. Prevent Default Form Behavior
+
+    e.preventDefault();
+
+    - In an HTML form, submitting normally reloads the page.
+    - e.preventDefault() stops this default behavior.
+    - allowing the React app to handle the form submission asynchronously.
+    - e.preventDefault() prevents the default behavior of form submission
+    - which is to reload the page.Behavior.
+
+3. Create userData Object
+
+    const userData = {
+        fname,
+        email,
+        password,
+        mobile,
+        address,
+        city,
+        gender,
+        subject
+    };
+
+- [ userData is an object that holds all the input values ], The function creates an object (userData) containing the user's input data.
+- The values (fname, email, etc.) are coming from React state
+
+4. Send Data to Backend using axios.post
+
+    axios.post('http://localhost:8000/postuser', userData)
+
+- axios.post() is used to send a POST request to the server ( The function uses the axios library to send an HTTP POST request to the server ).
+- The first argument ('http://localhost:8000/postuser') is the URL of the API endpoint where the data will be sent.
+- The second argument is the data object (userData), which will be sent to the backend
+- The second argument (userData) is the data being sent to the server. 
+- In this case, it's the userData object containing the form inputs.
+
+5. Handle the Response
+
+    .then(res => {
+        console.log("hi", res.data);
+        alert('Data Added Successfully!!');
+        setFname("");
+        setEmail("");
+        setPassword("");
+        setMobile("");
+        setAddress("");
+        setCity("");
+        setGender("");
+        setSubject([]);
+    })
+
