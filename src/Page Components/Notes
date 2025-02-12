@@ -64,4 +64,14 @@ Q. useState :
     ✅ setCount is the function to update count.
     ✅ Clicking the button increments the count and triggers a re✅render.
 
+Q. What is useEffect?
+-> useEffect is a React Hook that allows functional components to handle side effects such as:
+
+- Fetching data from an API
+- Manipulating the DOM
+- Setting up subscriptions or event listeners
+- Managing timers or intervals
+- Before React Hooks, side effects were handled using lifecycle methods like componentDidMount, componentDidUpdate, and componentWillUnmount inside class components. 
+useEffect combines all these functionalities into one.
+
 
