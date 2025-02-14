@@ -74,4 +74,7 @@ Q. What is useEffect?
 - Before React Hooks, side effects were handled using lifecycle methods like componentDidMount, componentDidUpdate, and componentWillUnmount inside class components. 
 useEffect combines all these functionalities into one.
 
+Q. Why use useEffect?
+- To perform side effects (like data fetching) in functional components.
+- To ensure the side effect runs only when necessary (e.g., once on mount).
 

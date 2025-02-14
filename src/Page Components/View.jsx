@@ -11,10 +11,7 @@ const View = () => {
 
     // const navigate = useNavigate()
 
-    useEffect(() => {
-        showUsers()
-    }, [])
-
+    // Function to fetch users
     const showUsers = () => {
         axios.get(`http://localhost:8000/getuser`)
             .then(res => {
@@ -24,18 +21,24 @@ const View = () => {
             })
     }
 
+    // Function to delete a user
     const deletedata = (id) => {
         axios.delete(`http://localhost:8000/deleteuser/${id}`)
             .then(
                 res => {
                     console.log('User Deleted : ', res.data);
-                    alert('User Delete');
+                    alert('User Deleted');
                     showUsers()
                 }
             ).catch(error => {
                 console.error('Error Deleting User : ', error);
             });
     }
+
+    // Fetch users on component mount
+    useEffect(() => {
+        showUsers()
+    }, [])
 
     return (
         <>
